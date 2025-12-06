@@ -21,7 +21,7 @@ const Home = () => {
 		<>
 			<Intro />
 			<FixedMenu />
-			{/* <Services /> */}
+			<Services />
 			<About />
 			<Journey />
 			<Work />

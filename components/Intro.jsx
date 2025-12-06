@@ -5,6 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 import { Link as ScrollLink } from "react-scroll";
 import RotatingShape from "./RotatingShape";
 import Header from "./Header";
+import Stats from "./Stats/Stats";
 
 const Intro = () => {
 	return (
@@ -39,7 +40,7 @@ const Intro = () => {
 					</ScrollLink>
 
 					{/* {Stats} */}
-					<div>Stats</div>
+					<Stats />
 				</div>
 				<div className="hidden xl:flex w-[55vw] h-[800px] absolute top-0 right-0 bg-accent ">
 					<div className="absolute w-[558px] h-[642px] bottom-0 z-40 left-[6.5vw]">
@@ -54,32 +55,54 @@ const Intro = () => {
 					</div>
 
 					{/* {arrow shape} */}
-					<div className="hidden xl:flex absolute top-40 left-[4vw]">
+					<div
+						className="hidden xl:flex absolute top-40 left-[4vw]"
+						data-scroll
+						data-scroll-speed="0.1"
+					>
 						<Image src="/assets/hero/arrow.svg" width={160} height={160} alt="" />
 					</div>
 
 					{/* {shape 1} */}
-					<div className="absolute top-[600px] left-[3vw]">
+					<div
+						className="absolute top-[600px] left-[3vw]"
+						data-scroll
+						data-scroll-speed="0.2"
+					>
 						<RotatingShape
-							content={<Image src="assets/hero/shape-1.svg" width={38} height={38} alt="" />}
+							content={
+								<Image src="assets/hero/shape-1.svg" width={38} height={38} alt="" />
+							}
 							direction="left"
 							duration={6}
 						/>
 					</div>
 
 					{/* {shape 2} */}
-					<div className="absolute top-[240px] xl:left-[30vw]">
+					<div
+						className="absolute top-[240px] xl:left-[30vw]"
+						data-scroll
+						data-scroll-speed="0.1"
+					>
 						<RotatingShape
-							content={<Image src="assets/hero/shape-2.svg" width={34} height={34} alt="" />}
+							content={
+								<Image src="assets/hero/shape-2.svg" width={34} height={34} alt="" />
+							}
 							direction="right"
 							duration={5}
 						/>
 					</div>
 
 					{/* {shape 3} */}
-					<div className="absolute top-[480px] xl:left-[40vw]">
+					<div
+						className="absolute top-[480px] xl:left-[40vw]"
+						data-scroll
+						data-scroll-speed="0.08"
+					>
 						<RotatingShape
-							content={<Image src="assets/hero/shape-3.svg" width={36} height={36} alt="" />}
+							content={
+								<Image src="assets/hero/shape-3.svg" width={36} height={36} alt="" />
+							}
 							direction="left"
 							duration={7}
 						/>
