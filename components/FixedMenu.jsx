@@ -21,33 +21,73 @@ const FixedMenu = () => {
 		setIsMounted(true);
 	}, []);
 
-    useEffect(() => {
-        if (isMounted) {
-            const handleScroll = () => {
-                // show button after scrolling 150px on the screen
-                setShowMenuButton(window.scrollY > 150) 
-            }
-            if (!isMobile) 
-            {
-                window.addEventListener("scroll", handleScroll)
-                return ()=> window.removeEventListener("scroll", handleScroll);
-            }
-            else {
-                // Mobile view button should always be present
-                setShowMenuButton(true )
-            }
-        }
-    }, [isMobile, isMounted]);
+	useEffect(() => {
+		if (isMounted) {
+			const handleScroll = () => {
+				// show button after scrolling 150px on the screen
+				setShowMenuButton(window.scrollY > 150);
+			};
+			if (!isMobile) {
+				window.addEventListener("scroll", handleScroll);
+				return () => window.removeEventListener("scroll", handleScroll);
+			} else {
+				// Mobile view button should always be present
+				setShowMenuButton(true);
+			}
+		}
+	}, [isMobile, isMounted]);
 
-    // Prevent redering before its mounted
-    if (!isMounted) {
-        return null
-    }
+	// Prevent redering before its mounted
+	if (!isMounted) {
+		return null;
+	}
 
 	return (
 		<div className="fixed w-full h-[400px] z-50 flex justify-center pointer-events-none bg-transparent">
 			<AnimatePresence>
-				{showMenu && showMenuButton && <motion.div>Menu</motion.div>}
+				{showMenu && showMenuButton && (
+					<motion.div className="relative w-full max-w-md md:max-w-none h-[400px] bottom-[28rem] xl:bottom-[21.2rem] px-4 pointer-events-auto">
+						<div className="bg-white w-full h-full shadow-custom max-w-[1170px] mx-auto py-12 xl:py-12 px-12 xl:px-32 flex items-center gap-12 rounded-lg">
+							<Nav
+								containerStyles="md:border-r border-secondary/20 md:pr-12 w-full md:w-auto text-center md:text-left"
+								listStyles="flex flex-col justify-center gap-4"
+								LinkStyles="font-primary text-4xl text-primary cursor-pointer"
+								//spy={true}
+							/>
+							<div className="hidden md:flex mx-auto">
+								<div>
+									<div className="flex gap-12 mb-12">
+										<div className="flex flex-col">
+											<div className="text-[28px] text-accent mb-2">
+												<FiMapPin />
+											</div>
+											<p className="font-semibold text-primary text-lg">Location</p>
+											<p>New York, USA</p>
+										</div>
+
+										<div className="flex flex-col">
+											<div className="text-[28px] text-accent mb-2">
+												<FiPhoneCall />
+											</div>
+											<p className="font-semibold text-primary text-lg">Phone</p>
+											<p>+1 (414)-739-7754</p>
+										</div>
+
+										<div className="flex flex-col">
+											<div className="text-[28px] text-accent mb-2">
+												<FiMail />
+											</div>
+											<p className="font-semibold text-primary text-lg">Email</p>
+											<p>sharathchander.p@gmail.com</p>
+										</div>
+									</div>
+									{/* Socials */}
+									<Socials containerStyles="flex gap-2" iconStyles="text-[20px] w-[32px] h-[32px] text-primary flex items-center justify-center rounded-full" />
+								</div>
+							</div>
+						</div>
+					</motion.div>
+				)}
 			</AnimatePresence>
 			{/* Render buttons */}
 			{/* Render button on mibile without any animations */}

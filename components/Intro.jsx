@@ -8,7 +8,7 @@ import Header from "./Header";
 
 const Intro = () => {
 	return (
-		<section className="h-[800px] relative bg-accent/10 xl:bg-white">
+		<section className="h-[800px] relative bg-accent/10 xl:bg-white" id="home">
 			<Header />
 			<div className="container mx-auto h-full">
 				<div className="relative z-20 h-full w-full xl:max-w-[768px] flex flex-col items-center xl:items-center justify-center text-center xl:text-left pt-10">
@@ -49,18 +49,19 @@ const Intro = () => {
 							quality={100}
 							priority
 							className="object-contain"
+							alt=""
 						/>
 					</div>
 
 					{/* {arrow shape} */}
 					<div className="hidden xl:flex absolute top-40 left-[4vw]">
-						<Image src="/assets/hero/arrow.svg" width={160} height={160} />
+						<Image src="/assets/hero/arrow.svg" width={160} height={160} alt="" />
 					</div>
 
 					{/* {shape 1} */}
 					<div className="absolute top-[600px] left-[3vw]">
 						<RotatingShape
-							content={<Image src="assets/hero/shape-1.svg" width={38} height={38} />}
+							content={<Image src="assets/hero/shape-1.svg" width={38} height={38} alt="" />}
 							direction="left"
 							duration={6}
 						/>
@@ -69,7 +70,7 @@ const Intro = () => {
 					{/* {shape 2} */}
 					<div className="absolute top-[240px] xl:left-[30vw]">
 						<RotatingShape
-							content={<Image src="assets/hero/shape-2.svg" width={34} height={34} />}
+							content={<Image src="assets/hero/shape-2.svg" width={34} height={34} alt="" />}
 							direction="right"
 							duration={5}
 						/>
@@ -78,7 +79,7 @@ const Intro = () => {
 					{/* {shape 3} */}
 					<div className="absolute top-[480px] xl:left-[40vw]">
 						<RotatingShape
-							content={<Image src="assets/hero/shape-3.svg" width={36} height={36} />}
+							content={<Image src="assets/hero/shape-3.svg" width={36} height={36} alt="" />}
 							direction="left"
 							duration={7}
 						/>

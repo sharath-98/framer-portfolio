@@ -26,7 +26,13 @@ const Nav = ({containerStyles, listStyles, LinkStyles, spy}) => {
         <ul className={listStyles}>
             {
                 links.map((link, index) => {
-                    return <ScrollLink spy={spy} key={index} activeClass="active" to={link.name} smooth className={LinkStyles}>{link.name}</ScrollLink>
+                    return <ScrollLink 
+					spy={spy} 
+					key={index} 
+					activeClass="active" 
+					to={link.name} 
+					smooth 
+					className={LinkStyles}>{link.name}</ScrollLink>
                 })
             }
         </ul>
