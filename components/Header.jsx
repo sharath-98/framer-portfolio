@@ -19,7 +19,7 @@ const Header = () => {
 								listStyles="flex gap-6"
 								LinkStyles="text-primary font-primary text-lg tracking-[1.4px] transition-all duration-300 cursor-pointer"
 							/>
-							<Socials />
+							<Socials containerStyles="flex items-center gap-2" iconStyles="text-base w-[32px] h-[32px] bg-primary text-white flex items-center justify-center rounded-full" />
 						</div>
 					</div>
 				</div>
