@@ -25,8 +25,8 @@ const journey = [
 	{
 		type: "experience",
 		company: "Barclays",
-		logoUrl: "/assets/journey/experience/barclays_logo.png.webp",
-		position: "Full-Stack Software Developer",
+		logoUrl: "/assets/journey/experience/barclays_logo.svg",
+		position: " - Full-Stack Software Developer",
 		duration: "Jun 2023 - Present",
 		description:
 			"Git, Bitbucket, Github, Selenium automation testing, Junit, Jest",
@@ -34,8 +34,8 @@ const journey = [
 	{
 		type: "experience",
 		company: "Medical College of Wisconsin",
-		logoUrl: "/assets/journey/experience/barclays_logo.png.webp",
-		position: "Full-Stack Java Developer - Programmer Analyst Intern",
+		logoUrl: "/assets/journey/experience/mcw.png",
+		position: " - Full-Stack Java Developer Intern",
 		duration: "Mar 2023 - May 2023",
 		description:
 			"Git, Bitbucket, Github, Selenium automation testing, Junit, Jest",
@@ -43,8 +43,8 @@ const journey = [
 	{
 		type: "experience",
 		company: "University of Wisconsin",
-		logoUrl: "/assets/journey/experience/barclays_logo.png.webp",
-		position: "Graduate Teaching Assistant",
+		logoUrl: "/assets/journey/experience/uwm.png",
+		position: " - Graduate Teaching Assistant",
 		duration: "Sep 2022 - May 2023",
 		description:
 			"Git, Bitbucket, Github, Selenium automation testing, Junit, Jest",
@@ -52,8 +52,8 @@ const journey = [
 	{
 		type: "experience",
 		company: "University of Wisconsin",
-		logoUrl: "/assets/journey/experience/barclays_logo.png.webp",
-		position: "Google Developer Club - Android Lead",
+		logoUrl: "/assets/journey/experience/uwm.png",
+		position: " - Google Developer Club | Android Lead",
 		duration: "Jan 2023 - May 2023",
 		description:
 			"Git, Bitbucket, Github, Selenium automation testing, Junit, Jest",
@@ -61,42 +61,42 @@ const journey = [
 	{
 		type: "experience",
 		company: "Kyyba Innovations",
-		logoUrl: "/assets/journey/experience/barclays_logo.png.webp",
-		position: "Software Developer Intern",
+		logoUrl: "/assets/journey/experience/kyyba.png",
+		position: " - Software Developer Intern",
 		duration: "Jun 2022 - Dec 2022 & Jan 2020 - Dec 2020",
 		description: "",
 	},
-	{
-		type: "experience",
-		company: "CEMILAC",
-		logoUrl: "/assets/journey/experience/barclays_logo.png.webp",
-		position: "Web Developer Intern",
-		duration: "May 2019 - Jul 2019",
-		description: "",
-	},
-	{
-		type: "experience",
-		company: "Hindustan Aeronautics Limited",
-		logoUrl: "/assets/journey/experience/barclays_logo.png.webp",
-		position: "Developer Intern",
-		duration: "May 2018 - Jul 2018",
-		description: "",
-	},
+	// {
+	// 	type: "experience",
+	// 	company: "CEMILAC",
+	// 	logoUrl: "/assets/journey/experience/cemilac.png",
+	// 	position: "Web Developer Intern",
+	// 	duration: "May 2019 - Jul 2019",
+	// 	description: "",
+	// },
+	// {
+	// 	type: "experience",
+	// 	company: "Hindustan Aeronautics Limited",
+	// 	logoUrl: "/assets/journey/experience/barclays_logo.png.webp",
+	// 	position: "Developer Intern",
+	// 	duration: "May 2018 - Jul 2018",
+	// 	description: "",
+	// },
 
 	// Education
 	{
 		type: "education",
 		instituition: "University of Wisconsin",
-		logoUrl: "/assets/journey/education/institution.svg",
-		qualification: "Master of Science - Computer Science",
+		logoUrl: "/assets/journey/education/uwm.png",
+		qualification: "M.Sc - Computer Science",
 		duration: "Sep 2021 - May 2023",
 		description: "",
 	},
 	{
 		type: "education",
 		instituition: "Anna University",
-		logoUrl: "/assets/journey/education/institution.svg",
-		qualification: "Bachelor of Engineering  - Computer Science & Engineering",
+		logoUrl: "/assets/journey/education/annauniv.png",
+		qualification: "B.E - Computer Science & Engineering",
 		duration: "Jul 2016 - Mar 2020",
 		description: "",
 	},
