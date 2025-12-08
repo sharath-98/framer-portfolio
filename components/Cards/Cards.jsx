@@ -29,7 +29,7 @@ const journey = [
 		position: " - Full-Stack Software Developer",
 		duration: "Jun 2023 - Present",
 		description:
-			"Git, Bitbucket, Github, Selenium automation testing, Junit, Jest",
+			"Architected & implemented high-performance web apps and robust microservices using a diverse stack (Angular, React, Java, .NET 8, Python, DBs). Led DevOps modernization, migrated legacy .NET services and 50+ projects to CI/CD with zero downtime. AI/ML and Gen AI initiatives delivered substantial time reduction and millions in financial benefits.",
 	},
 	{
 		type: "experience",
@@ -38,7 +38,7 @@ const journey = [
 		position: " - Full-Stack Java Developer Intern",
 		duration: "Mar 2023 - May 2023",
 		description:
-			"Git, Bitbucket, Github, Selenium automation testing, Junit, Jest",
+			"Designed and developed the Gene Binning tool for the Rat Genome Database Portal using Spring/VueJS. I created integrated statistical dashboards that yielded a 65% reduction in manhours and optimized Oracle/Java services, cutting the data response time from seven hours to just 12 minutes.",
 	},
 	{
 		type: "experience",
@@ -47,7 +47,7 @@ const journey = [
 		position: " - Graduate Teaching Assistant",
 		duration: "Sep 2022 - May 2023",
 		description:
-			"Git, Bitbucket, Github, Selenium automation testing, Junit, Jest",
+			"Guided students on 3 core CS courses: Programming Language Concepts (CS431), Operating Systems (CS557), and Advanced Object-Oriented Programming (CS552). The instruction focused on critical concepts including syntax, semantics, process/memory management, and advanced design patterns.",
 	},
 	{
 		type: "experience",
@@ -55,8 +55,7 @@ const journey = [
 		logoUrl: "/assets/journey/experience/uwm.png",
 		position: " - Google Developer Club | Android Lead",
 		duration: "Jan 2023 - May 2023",
-		description:
-			"Git, Bitbucket, Github, Selenium automation testing, Junit, Jest",
+		description: "",
 	},
 	{
 		type: "experience",
