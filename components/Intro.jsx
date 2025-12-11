@@ -35,8 +35,9 @@ const Intro = () => {
 					<p className="lead max-w-[476px] mb-7">
 						Delivering powerful, scalable and performant products.
 					</p>
-					<ScrollLink to="contact" smooth>
+					<ScrollLink to="contact" className=" flex gap-4" smooth>
 						<button className="btn btn-accent mb-8">Contact me</button>
+						<button className="btn btn-primary  mb-8">Download Resume</button>
 					</ScrollLink>
 
 					{/* {Stats} */}
