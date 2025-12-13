@@ -13,7 +13,7 @@ const statsData = [
 		text: "Apps Built",
 	},
 	{
-		endCountNum: 5,
+		endCountNum: 4,
 		endCounttext: "+",
 		text: "Publications",
 	}

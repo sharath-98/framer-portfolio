@@ -37,7 +37,7 @@ const Intro = () => {
 					</p>
 					<ScrollLink to="contact" className=" flex gap-4" smooth>
 						<button className="btn btn-accent mb-8">Contact me</button>
-						<button className="btn btn-primary  mb-8">Download CV</button>
+						{/* <button className="btn btn-primary  mb-8">Download CV</button> */}
 					</ScrollLink>
 
 					{/* {Stats} */}

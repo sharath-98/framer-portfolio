@@ -76,8 +76,8 @@ const About = () => {
 						<div className="flex flex-col lg:flex-row gap-8 xl:gap-12 max-w-max mx-auto xl:mx-0 items-center">
 							{/* Item 1 */}
 							<div className="max-w-max">
-								<div className="uppercase font-bold text-primary">Age</div>
-								<p>27 years</p>
+								<div className="uppercase font-bold text-primary">Location</div>
+								<p>New York, USA</p>
 							</div>
 							{/* Item 2 */}
 							<div className="max-w-max">
