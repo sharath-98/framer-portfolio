@@ -20,6 +20,7 @@ import {
 	FaCloud,
 	FaDatabase,
 } from "react-icons/fa";
+import SkillCard from "./SkillCard";
 
 const journey = [
 	{
@@ -103,55 +104,47 @@ const journey = [
 	// Skills
 	{
 		type: "skill",
-		icon: <FaAws />,
+		icon: "/assets/work/code.png",
 		name: "Languages",
 		duration: "",
-		description: "Javascript, Typescript, C#, C/C++, Python, Java, HTML5/CSS3",
+		description: "Javascript, Typescript, C#, Python, Java, C/C++, ",
 	},
 	{
 		type: "skill",
-		icon: <FaAws />,
-		name: "Frameworks",
+		icon: "/assets/work/frontend.png",
+		name: "Frontend",
 		duration: "",
 		description:
-			"ReactJS, Redux, Spring Boot, NodeJS, Angular, .NET, Babel, Flask, Django, Webix",
+			"ReactJS, Redux, Angular, HTML5, CSS, Tailwind CSS, Bootstrap, AgGrid, Framer-motion",
 	},
 	{
 		type: "skill",
-		icon: <FaAws />,
-		name: "Cloud",
+		icon: "/assets/work/backend.png",
+		name: "Backend",
 		duration: "",
-		description: "AWS, Docker, Shell Scripting, Gitlab, Nolio, Teamcity, Jenkins",
+		description: ".NET, Flask, Django, Spring Boot, NodeJS, Junit, Selenium",
 	},
 	{
 		type: "skill",
-		icon: <FaGitlab />,
-		name: "DevOps",
-		duration: "",
-		description: "AWS, Docker, Shell Scripting, Gitlab, Nolio, Teamcity, Jenkins",
-	},
-	{
-		type: "skill",
-		icon: <FaDatabase />,
+		icon: "/assets/work/database.png",
 		name: "Database",
 		duration: "",
 		description: "Oracle, MySQL, PostgreSQL, MongoDB (NoSQL)",
 	},
 	{
 		type: "skill",
-		icon: <FaBrain />,
-		name: "AI-ML",
+		icon: "/assets/work/tools.png",
+		name: "DevOps & Cloud",
 		duration: "",
-		description:
-			"Machine Learning, Deep Learning, Natural Language Processing, Artificial Intelligence, Tensorflow, Keras, GenAI Model Development",
+		description: "AWS, Docker, Shell Scripting, Gitlab, Nolio, Teamcity, Jenkins",
 	},
 	{
 		type: "skill",
-		icon: <FaAws />,
-		name: "Others",
+		icon: "/assets/work/ai-2.png",
+		name: "AI-ML",
 		duration: "",
 		description:
-			"Git, Bitbucket, Github, Selenium automation testing, Junit, Jest",
+			"Machine Learning, Deep Learning, Natural Language Processing, Artificial Intelligence, Tensorflow, Keras, Pandas, GenAI Model Development",
 	},
 
 	// REsearch Publications
@@ -244,20 +237,24 @@ const Cards = () => {
 				</TabsContent>
 
 				<TabsContent value="skill" className="w-full">
-					<AnimatePresence>
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							exit={{ opacity: 0, y: 20 }}
-							transition={{ duration: 0.3 }}
-						>
+					<div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px]">
+						<AnimatePresence>
 							{journey
 								.filter((item) => item.type == "skill")
 								.map((card, index) => {
-									return <Card key={index} {...card} />;
+									return (
+										<motion.div
+											key={index}
+											initial={{ opacity: 0, y: 20 }}
+											animate={{ opacity: 1, y: 0 }}
+											transition={{ duration: 0.3 }}
+										>
+											<SkillCard {...card} />
+										</motion.div>
+									);
 								})}
-						</motion.div>
-					</AnimatePresence>
+						</AnimatePresence>
+					</div>
 				</TabsContent>
 
 				<TabsContent value="publication" className="w-full">
