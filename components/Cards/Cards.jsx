@@ -119,7 +119,7 @@ const journey = [
 	},
 	{
 		type: "skill",
-		icon: "/assets/work/backend.png",
+		icon: "/assets/work/right-arrow.gif",
 		name: "Backend",
 		duration: "",
 		description: ".NET, Flask, Django, Spring Boot, NodeJS, Junit, Selenium",
