@@ -16,7 +16,7 @@ const About = () => {
 							{/* About me Image */}
 							<div className="rounded-tl-[8px] rounded-tr-[120px] w-full bg-[#e5f8f6] min-h-[480px] flex items-end justify-center">
 								<Image
-									src="/assets/about/img.png"
+									src="/assets/about/ProfilePic-3.png"
 									width={350}
 									height={478}
 									quality={100}
