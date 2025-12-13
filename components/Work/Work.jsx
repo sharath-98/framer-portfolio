@@ -6,64 +6,70 @@ import WorkItem from "./WorkItem";
 
 const data = [
 	{
-		href: "",
+		href: "https://delicious-e372a.web.app/",
 		category: "full-stack",
-		img: "/assets/work/thumb-1.png",
-		title: "Test-1",
+		img: "/assets/work/chef1.png",
+		title: "Delicious",
 	},
 	{
-		href: "",
+		href: "https://clone-55587.web.app/",
 		category: "full-stack",
-		img: "/assets/work/thumb-2.png",
-		title: "Test-2",
+		img: "/assets/work/amazon_logo.jpeg",
+		title: "Amazon Shopping",
 	},
 	{
-		href: "",
+		href: "https://github.com/sharath-98/spotify",
 		category: "full-stack",
-		img: "/assets/work/thumb-1.png",
-		title: "Test-1",
+		img: "/assets/work/Spotify-logo.png",
+		title: "Spotify",
 	},
 	{
-		href: "",
+		href: "https://github.com/sharath-98/whatsapp",
 		category: "full-stack",
-		img: "/assets/work/thumb-2.png",
-		title: "Test-2",
+		img: "/assets/work/WhatsApp.png",
+		title: "WhatsApp",
 	},
 	{
-		href: "",
+		href: "https://github.com/sharath-98/URL_Shortner",
 		category: "full-stack",
-		img: "/assets/work/thumb-1.png",
-		title: "Test-1",
-	},
-	{
-		href: "",
-		category: "full-stack",
-		img: "/assets/work/thumb-2.png",
-		title: "Test-2",
-	},
-	{
-		href: "",
-		category: "full-stack",
-		img: "/assets/work/thumb-1.png",
-		title: "Test-1",
-	},
-	{
-		href: "",
-		category: "full-stack",
-		img: "/assets/work/thumb-2.png",
-		title: "Test-2",
-	},
-	{
-		href: "",
-		category: "AI-ML",
-		img: "/assets/work/thumb-3.png",
-		title: "Test-3",
+		img: "/assets/work/url_short.jpeg",
+		title: "URL Shortener",
 	},
 	{
 		href: "",
 		category: "mobile apps",
-		img: "/assets/work/thumb-3.png",
-		title: "Test-4",
+		img: "/assets/work/cycle.png",
+		title: "Bublr 2.0",
+	},
+	{
+		href: "",
+		category: "mobile apps",
+		img: "/assets/work/chatbox.png",
+		title: "Chatbox",
+	},
+	{
+		href: "https://uni-vise.com",
+		category: "AI-ML",
+		img: "/assets/work/univise.png",
+		title: "Univise - University Recommender App",
+	},
+	{
+		href: "https://github.com/sharath-98/Kidney-disease-prediction",
+		category: "AI-ML",
+		img: "/assets/work/kidney.jpeg",
+		title: "Kidney Disease Detection",
+	},
+	{
+		href: "https://github.com/sharath-98/Detecting-Malaraia",
+		category: "AI-ML",
+		img: "/assets/work/malaria.jpeg",
+		title: "Malaria detection",
+	},
+	{
+		href: "https://github.com/sharath-98/Breast-Cancer-Detection",
+		category: "AI-ML",
+		img: "/assets/work/cancer.webp",
+		title: "Breast Cancer detection",
 	},
 ];
 
@@ -125,7 +131,9 @@ const Work = () => {
 						</div>
 						{visibleItems < filterWork.length && (
 							<div className="flex justify-center mt-12">
-								<button onClick={loadMoreItems} className="btn btn-accent">Load More</button>
+								<button onClick={loadMoreItems} className="btn btn-accent">
+									Load More
+								</button>
 							</div>
 						)}
 					</TabsContent>

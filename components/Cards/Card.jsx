@@ -9,6 +9,8 @@ const Card = ({
 	description,
 	company,
 	instituition,
+	journal,
+	title,
 	qualification,
 	name,
 	icon,
@@ -38,6 +40,8 @@ const Card = ({
 									? company
 									: type === "education"
 									? instituition
+									: type === "publication"
+									? journal
 									: type === "skill"
 									? name
 									: null}
@@ -47,11 +51,15 @@ const Card = ({
 									? position
 									: type === "education"
 									? qualification
+									: type === "publication"
+									? title
 									: duration}
 							</h3>
 						</div>
 						<p className="text-base">
-							{type !== "experience" && type !== "education" ? null : duration}
+							{type !== "experience" && type !== "education" && type !== "publication"
+								? null
+								: duration}
 						</p>
 					</div>
 					<div className="flex-1 flex justify-center items-center xl:justify-start md:py-8 md:px-16 ">

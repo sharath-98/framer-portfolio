@@ -20,6 +20,7 @@ import {
 	FaCloud,
 	FaDatabase,
 } from "react-icons/fa";
+import SkillCard from "./SkillCard";
 
 const journey = [
 	{
@@ -103,55 +104,86 @@ const journey = [
 	// Skills
 	{
 		type: "skill",
-		icon: <FaAws />,
+		icon: "/assets/work/code.png",
 		name: "Languages",
 		duration: "",
-		description: "Javascript, Typescript, C#, C/C++, Python, Java, HTML5/CSS3",
+		description: "Javascript, Typescript, C#, Python, Java, C/C++, ",
 	},
 	{
 		type: "skill",
-		icon: <FaAws />,
-		name: "Frameworks",
+		icon: "/assets/work/frontend.png",
+		name: "Frontend",
 		duration: "",
 		description:
-			"ReactJS, Redux, Spring Boot, NodeJS, Angular, .NET, Babel, Flask, Django, Webix",
+			"ReactJS, Redux, Angular, HTML5, CSS, Tailwind CSS, Bootstrap, AgGrid, Framer-motion",
 	},
 	{
 		type: "skill",
-		icon: <FaAws />,
-		name: "Cloud",
+		icon: "/assets/work/backend.png",
+		name: "Backend",
 		duration: "",
-		description: "AWS, Docker, Shell Scripting, Gitlab, Nolio, Teamcity, Jenkins",
+		description: ".NET, Flask, Django, Spring Boot, NodeJS, Junit, Selenium",
 	},
 	{
 		type: "skill",
-		icon: <FaGitlab />,
-		name: "DevOps",
-		duration: "",
-		description: "AWS, Docker, Shell Scripting, Gitlab, Nolio, Teamcity, Jenkins",
-	},
-	{
-		type: "skill",
-		icon: <FaDatabase />,
+		icon: "/assets/work/database.png",
 		name: "Database",
 		duration: "",
 		description: "Oracle, MySQL, PostgreSQL, MongoDB (NoSQL)",
 	},
 	{
 		type: "skill",
-		icon: <FaBrain />,
-		name: "AI-ML",
+		icon: "/assets/work/tools.png",
+		name: "DevOps & Cloud",
 		duration: "",
-		description:
-			"Machine Learning, Deep Learning, Natural Language Processing, Artificial Intelligence, Tensorflow, Keras, GenAI Model Development",
+		description: "AWS, Docker, Shell Scripting, Gitlab, Nolio, Teamcity, Jenkins",
 	},
 	{
 		type: "skill",
-		icon: <FaAws />,
-		name: "Others",
+		icon: "/assets/work/ai-2.png",
+		name: "AI-ML",
 		duration: "",
 		description:
-			"Git, Bitbucket, Github, Selenium automation testing, Junit, Jest",
+			"Machine Learning, Deep Learning, Natural Language Processing, Artificial Intelligence, Tensorflow, Keras, Pandas, GenAI Model Development",
+	},
+
+	// REsearch Publications
+	{
+		type: "publication",
+		journal: "Master's Thesis",
+		logoUrl: "/assets/journey/education/uwm.png",
+		title: "Emotion Classification and Intensity Prediction on Tweets",
+		duration: "2023",
+		description:
+			"This thesis addresses the critical task of understanding social behavior by analyzing emotions expressed on microblogging platforms like Twitter. The developed system first classifies tweets into four core emotions (anger, joy, sadness, fear) with high accuracy. Following classification, the second phase uses regressors to predict the precise intensity of the detected emotion. Both the classification and intensity prediction systems were rigorously evaluated on a competition dataset, where the regressors notably outperformed the competition's best system.",
+	},
+	{
+		type: "publication",
+		journal: "Robot Intelligence Technology and Applications",
+		logoUrl: "/assets/work/rita-2018.jpeg",
+		title:
+			"Brain Tumour Detection and Classification Using K-Means Clustering and SVM Classifier",
+		duration: "2020",
+		description:
+			"Brain tumor detection is a critical step in treating this life-threatening malignancy. Utilizing Magnetic Resonance Imaging (MRI) is essential, as it overcomes the limitations of CT and Ultrasound by providing superior soft tissue contrast and allowing functional imaging. This paper presents an improved system for detection and classification: MRI images are first subjected to segmentation using an adaptive k-means clustering method to accurately isolate the tumor mass. The segmented image is then passed to a Support Vector Machine (SVM) classifier to determine the tumor type. Comparative analysis showed that the linear kernel function of the SVM achieved the highest classification accuracy.",
+	},
+	{
+		type: "publication",
+		journal: "IEEE",
+		logoUrl: "/assets/work/ieee.png",
+		title: "Audio Hiding in an Image Using Steganographic Methods",
+		duration: "2018",
+		description:
+			"Data security remains a critical concern, leading to the development of various protection techniques. Steganography addresses the limitations of cryptography by securely hiding secret data (such as audio, video, or text) within a seemingly harmless cover medium, like an image. This paper focuses on embedding a secret audio message into a two-dimensional color image. The implementation demonstrates the superior performance of the Least Significant Bit (LSB) algorithm over other techniques, like Discrete Wavelet Transform (DWT), for this specific task of audio steganography.",
+	},
+	{
+		type: "publication",
+		journal: "IEEE",
+		logoUrl: "/assets/work/ieee.png",
+		title: "Data Analysıs of Natural Language Queryıng Usıng NLP Interface",
+		duration: "2020",
+		description:
+			"The difficulty non-experts face in interacting with databases using Structured Query Language (SQL)—due to the need for specific keywords, syntactic rules, and knowledge of underlying table schemas—presents a major barrier to data access. This project aims to solve this limitation by incorporating a Natural Language Interface Relational Database System (NLIRDS), which combines features of Artificial Intelligence (AI) with the Relational Database Management System (RDBMS). Unlike previous systems that required manual creation of semantic maps, this NLIRDS automatically generates these maps, allowing users to effortlessly query the database using natural language.",
 	},
 ];
 
@@ -166,6 +198,7 @@ const Cards = () => {
 					<TabsTrigger value="experience">Experience</TabsTrigger>
 					<TabsTrigger value="education">Education</TabsTrigger>
 					<TabsTrigger value="skill">Skills</TabsTrigger>
+					<TabsTrigger value="publication">Publications</TabsTrigger>
 					<TabsTrigger value="award">Awards</TabsTrigger>
 				</TabsList>
 
@@ -204,6 +237,27 @@ const Cards = () => {
 				</TabsContent>
 
 				<TabsContent value="skill" className="w-full">
+					<div className="grid grid-cols-1 lg:grid-cols-3 gap-[30px]">
+						<AnimatePresence>
+							{journey
+								.filter((item) => item.type == "skill")
+								.map((card, index) => {
+									return (
+										<motion.div
+											key={index}
+											initial={{ opacity: 0, y: 20 }}
+											animate={{ opacity: 1, y: 0 }}
+											transition={{ duration: 0.3 }}
+										>
+											<SkillCard {...card} />
+										</motion.div>
+									);
+								})}
+						</AnimatePresence>
+					</div>
+				</TabsContent>
+
+				<TabsContent value="publication" className="w-full">
 					<AnimatePresence>
 						<motion.div
 							initial={{ opacity: 0, y: 20 }}
@@ -212,7 +266,7 @@ const Cards = () => {
 							transition={{ duration: 0.3 }}
 						>
 							{journey
-								.filter((item) => item.type == "skill")
+								.filter((item) => item.type == "publication")
 								.map((card, index) => {
 									return <Card key={index} {...card} />;
 								})}
