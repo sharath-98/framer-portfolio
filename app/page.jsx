@@ -2,10 +2,12 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import FixedMenu from "@/components/FixedMenu";
+import Footer from "@/components/Footer";
 import Intro from "@/components/Intro";
 import Journey from "@/components/Journey";
 import Services from "@/components/Services";
-import Work from "@/components/Work";
+import Testimonial from "@/components/Testimonial/Testimonial";
+import Work from "@/components/Work/Work";
 import LocomotiveScroll from "locomotive-scroll";
 import React, { useEffect } from "react";
 
@@ -25,8 +27,9 @@ const Home = () => {
 			<About />
 			<Journey />
 			<Work />
+			<Testimonial />
 			<Contact />
-			<div className="h-[3000px]"></div>
+			<Footer />
 		</>
 	);
 };
