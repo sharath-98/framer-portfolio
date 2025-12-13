@@ -21,8 +21,10 @@ import {
 	FaDatabase,
 } from "react-icons/fa";
 import SkillCard from "./SkillCard";
+import AnimatedText from "../AnimatedText";
 
 const journey = [
+	// Experience
 	{
 		type: "experience",
 		company: "Barclays",
@@ -56,7 +58,8 @@ const journey = [
 		logoUrl: "/assets/journey/experience/uwm.png",
 		position: " - Google Developer Club | Android Lead",
 		duration: "Jan 2023 - May 2023",
-		description: "",
+		description:
+			"Led the university's Google Developer Student Club as the Android Development Lead, responsible for mentoring students and designing hands-on workshops focused on Kotlin, Jetpack Compose, and reusable Android components, thereby fostering a technically proficient Android developer community on campus.",
 	},
 	{
 		type: "experience",
@@ -64,7 +67,8 @@ const journey = [
 		logoUrl: "/assets/journey/experience/kyyba.png",
 		position: " - Software Developer Intern",
 		duration: "Jun 2022 - Dec 2022 & Jan 2020 - Dec 2020",
-		description: "",
+		description:
+			"Designed and developed a modern omnichannel digital platform for a client using Java, Spring, REST APIs, and MySQL for core logic. Front-end was built with React JS and the Webix-Javascript library, translating UI/UX into code. Ensured quality via JUnit testing and bug fixes. Separately, developed a web application front-end using ReactJS and TypeScript, and built Java microservices with REST APIs. Codebase modernization and OOP optimization improved performance by 55%.",
 	},
 	// {
 	// 	type: "experience",
@@ -187,6 +191,16 @@ const journey = [
 	},
 ];
 
+const awardData = [
+	"AWS Certified Solutions Architect (In-progress)",
+	"AWS Certified Cloud Practioner",
+	"Chancellor’s Graduate Student Award - Fall 2022 | University of Wisconsin",
+	"Chancellor’s Graduate Student Award - Spring 2022 | University of Wisconsin",
+	"Certified Deep Learning Specialization by DeepLearning.AI",
+	"Gold Badges in Hackerrank for Problem Solving, C++, SQL, and Java.",
+	"Cash Prize for my research work on 'Natural Language Processing'",
+];
+
 const Cards = () => {
 	return (
 		<>
@@ -282,11 +296,20 @@ const Cards = () => {
 							exit={{ opacity: 0, y: 20 }}
 							transition={{ duration: 0.3 }}
 						>
-							{journey
-								.filter((item) => item.type == "award")
-								.map((card, index) => {
-									return <Card key={index} {...card} />;
-								})}
+							<div className="mb-10">
+								<ul>
+									{awardData.map((award, index) => (
+										// 3. Return a JSX element for each item
+										// The 'key' prop is crucial for performance
+										<li key={index}>
+											<AnimatedText
+												text={index + 1 + ". " + award}
+												textStyles="font-semibold text-secondary text-lg mb-3"
+											/>
+										</li>
+									))}
+								</ul>
+							</div>
 						</motion.div>
 					</AnimatePresence>
 				</TabsContent>
