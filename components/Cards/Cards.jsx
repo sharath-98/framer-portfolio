@@ -199,7 +199,7 @@ const Cards = () => {
 					<TabsTrigger value="education">Education</TabsTrigger>
 					<TabsTrigger value="skill">Skills</TabsTrigger>
 					<TabsTrigger value="publication">Publications</TabsTrigger>
-					<TabsTrigger value="award">Awards</TabsTrigger>
+					<TabsTrigger value="award">Certifications / Awards</TabsTrigger>
 				</TabsList>
 
 				<TabsContent value="experience" className="w-full">
